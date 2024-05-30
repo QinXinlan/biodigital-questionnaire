@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Questionnaire</h1>
+    <form action="{{ url_for('submit') }}" method="post">
+        <label for="question1">Question 1:</label>
+        <input type="text" id="question1" name="question1"><br><br>
+        
+        <label for="question2">Question 2:</label>
+        <input type="text" id="question2" name="question2"><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
