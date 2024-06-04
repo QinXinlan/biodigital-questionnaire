@@ -1,0 +1,228 @@
+/* styles.css */
+
+/* question.html style */
+body {
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-family: Arial, sans-serif;
+	font-size: 30px;
+    margin-top: 2%;
+}
+
+/* The name on top of the picture */
+h1 {
+    font-size: 90%;
+    margin-top: 2%;
+    background-color: white;
+    color: black;
+}
+
+/* Error message styling */
+.error {
+	/* background-color: #007bff;  */
+    color: red;
+    font-size: 20px;
+    /* margin-top: 1%; */
+	/* white-space: pre-wrap; /* Preserve whitespace and wrap lines */
+	/* max-width: 300px;  */
+}
+
+/* Styles for button containers */
+.button-container {
+    margin-top: 1%; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container button {
+    /* background-color: #007bff; /* Change the background color */ 
+    color: white; /* Change the text color */
+    border: none;
+    padding: 10px 20px; /* Adjust the padding as needed */
+    font-size: 80%; /* Adjust the font size */
+    cursor: pointer;
+	margin: 0 2%; /* Adjust the space between buttons */
+}
+
+.button-container .error-placeholder {
+    width: 20%; /* Adjust this width as needed */
+    text-align: center;
+    height: 30px; /* Adjust this height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-container .error-placeholder .error {
+    margin: 0;
+}
+
+.button-container button:hover {
+    background-color: #0056b3; /* Change the background color on hover */
+}
+
+/* Specific styles for left and right buttons */
+.button-container button.left-arrow {
+    background-color: #BABEC2; /* Make the left arrow gray */
+}
+
+.button-container button.right-arrow {
+    background-color: #1F83E7; /* Make the right arrow blue */
+}
+
+/* Specific styles for each face icon */
+.multi-button i.fa-dizzy {
+    color: #c5291f; /* Make the face corresponding to the "cut" emoji red */
+}
+
+.multi-button i.fa-frown {
+    color: #c56225; /* Make the face corresponding to the "copy" emoji orange */
+}
+
+.multi-button i.fa-meh {
+    color: #c49f2c; /* Make the face corresponding to the "paste" emoji yellow */
+}
+
+.multi-button i.fa-smile {
+    color: #a09b34; /* Make the face corresponding to the "dizzy" emoji purple */
+}
+
+.multi-button i.fa-grin-stars {
+    color: #84973b; /* Make the face corresponding to the "grin-stars" emoji pink */
+}
+
+.pause-container {
+    margin-top: 1%;
+    text-align: center;
+}
+
+.pause-rectangle {
+    background-color: grey;
+    padding: 0.5%;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.pause-button {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.pause-button i {
+    margin-right: 0%;
+}
+
+.resume-button {
+    font-size: 2em; /* Make the button bigger */
+    background-color: green; /* Set background color to green */
+    color: white; /* Set text color to white */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding to increase button size */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    cursor: pointer; /* Add pointer cursor on hover */
+}
+
+.resume-button:hover {
+    background-color: darkgreen; /* Darken the background color on hover */
+}
+
+
+
+/* login.html style */
+.login-container {
+    display: flex; /* Use flexbox to control layout */
+    justify-content: space-between; /* Ensure space between form and image */
+    align-items: center; /* Vertically center items */
+    background-repeat: no-repeat;
+    background-size: contain; /* Ensure the image fits the container */
+    background-position: right bottom; /* Position the image on the bottom right */
+}
+
+.login-form {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for the form */
+    padding: 1%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Allow the form to grow to fill available space */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+/* Text on top of Username box */
+h2 {
+    text-align: center;
+    margin-bottom: 2%;
+	color: black; /* red; #fff;  */
+	font-size: 90%; /* Adjust the font size as needed */
+}
+
+/* Username */
+.username-input {
+    width: 15%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc; 
+	background-color:  w; /* red; */
+    margin-bottom: 10px; /* Add margin for spacing */
+    text-align: center; /* Center-align text */
+}
+.username-input:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Login button */
+.login-button {
+    width: 10%; 
+    padding: 10px;
+    background-color: #007bff; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 100%;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+.button-wrapper {
+    display: flex; /* Make the buttons flex items */
+}
+
+.no-button, .yes-button {
+    margin-right: 10px; /* Add margin between the buttons */
+    padding: 10px 20px; /* Add padding to the buttons */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Change cursor to pointer */
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.no-button {
+    background-color: red; /* Set background color for the "No" button */
+    color: white; /* Set text color for the "No" button */
+}
+
+.yes-button {
+    background-color: #007bff; /* Set background color for the "Yes" button */
+    color: white; /* Set text color for the "Yes" button */
+}
+
+.no-button:hover {
+    background-color: darkred; /* Set background color for the "No" button */
+}
+
+.yes-button:hover {
+    background-color: #0056b3; /* Set background color for the "Yes" button */
+}

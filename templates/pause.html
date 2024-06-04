@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pause</title>
+    <link rel="stylesheet" type="text/css" href="../static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- <h1>Questionnaire Paused</h1> --> 
+		<img src="{{ url_for('static', filename='pause.png') }}" alt="Pause Image">
+		<p>Are you sure you want to pause? There are only {{ total - qnum }} images remaining.<br>
+			你确定要暂停吗？只剩下 {{ total - qnum }} 张图片了。
+		</p>
+        <form action="{{ url_for('resume') }}" method="GET">
+            <input type="hidden" name="qnum" value="{{ qnum }}">
+            <button type="submit" class="resume-button">
+                <i class="fas fa-play"></i>
+            </button>
+        </form>
+    </div>
+</body>
+</html>
