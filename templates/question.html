@@ -9,13 +9,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>{{ qnum + 1 }} / {{ total }}</h1> <!-- <h1>Question {{ qnum + 1 }}</h1> -->
+        <h1>{{ qnum + 1 }} / {{ total }}</h1> <!-- <h1>Question {{ qnum + 1 }} / {{preselected_answer}}</h1> -->
         <img src="{{ url_for('static', filename=image_name) }}" alt="Question Image" class="question-image">
         <form method="POST">
             <div class="multi-button">
                 {% for emoji in options %}
-                <input type="radio" id="option{{ loop.index }}" name="answer" value="{{ emoji }}">
-                <label for="option{{ loop.index }}">
+                <input type="radio" id="option{{ loop.index }}" name="answer" value="{{ emoji }}" {% if emoji|string == preselected_answer %}checked{% endif %}>
+				<label for="option{{ loop.index }}">
                     {% if emoji == 0 %}
                     <i class="fas fa-dizzy fa-2x"></i>
                     {% elif emoji == 1 %}
@@ -31,7 +31,7 @@
                 {% endfor %}
             </div>
             <div  class="button-container">
-				<button class="left-arrow" onclick="window.history.back()">
+				<button type="submit" name="navigate" value="previous" class="left-arrow" >
 					<i class="fas fa-arrow-left"></i> <!-- Replace text "Go Back" with icon --> 
 				</button>
 				<div class="error-placeholder">
@@ -39,7 +39,7 @@
                     <div class="error">{{ error|safe }}</div> <!-- Make sure the error message is rendered as HTML -->
                     {% endif %}
                 </div>
-				<button class="right-arrow">
+				<button type="submit" name="navigate" value="next" class="right-arrow">
 					<i class="fas fa-arrow-right"></i> <!-- Replace text "Next" with icon --> 
 				</button>
 			</div>

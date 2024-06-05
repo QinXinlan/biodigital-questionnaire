@@ -14,12 +14,21 @@
 		<p>Are you sure you want to pause? There are only {{ total - qnum }} images remaining.<br>
 			你确定要暂停吗？只剩下 {{ total - qnum }} 张图片了。
 		</p>
-        <form action="{{ url_for('resume') }}" method="GET">
-            <input type="hidden" name="qnum" value="{{ qnum }}">
-            <button type="submit" class="resume-button">
-                <i class="fas fa-play"></i>
-            </button>
-        </form>
+		<div class="button-pause-container">	
+			<form action="{{ url_for('resume') }}" method="GET" class="button-form">
+				<input type="hidden" name="qnum" value="{{ qnum }}">
+				<button type="submit" class="resume-button">
+					<i class="fas fa-play"></i>
+				</button>
+			</form>
+		</div>
+		<div class="button-pause-container">			
+			<form action="{{ url_for('thanks') }}" method="GET" class="button-form">
+				<button type="submit" class="stop-button">
+					<i class="fas fa-stop"></i>
+				</button>
+			</form>
+		</div>
     </div>
 </body>
 </html>

@@ -118,18 +118,48 @@ h1 {
     margin-right: 0%;
 }
 
+/* pause.html style */
+.button-pause-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 2%;
+}
+
+.button-form {
+    display: inline-block;
+}
+
+.resume-button, .stop-button {
+    color: white; /* Set text color to white */
+    border: none; /* Remove border */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    cursor: pointer; /* Add pointer cursor on hover */	
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .resume-button {
     font-size: 2em; /* Make the button bigger */
     background-color: green; /* Set background color to green */
-    color: white; /* Set text color to white */
-    border: none; /* Remove border */
-    padding: 10px 20px; /* Add padding to increase button size */
-    border-radius: 10px; /* Add border-radius for rounded corners */
-    cursor: pointer; /* Add pointer cursor on hover */
+	margin-bottom: 10%;
+	padding: 10px 20px; /* Add padding to increase button size */
 }
 
 .resume-button:hover {
     background-color: darkgreen; /* Darken the background color on hover */
+}
+
+.stop-button {
+    font-size: 80%; /* Make the button bigger */
+    background-color: grey; /* Set background color to green */
+	padding: 5px 10px; /* Add padding to increase button size */
+}
+
+.stop-button:hover {
+    background-color: darkgrey; /* Darken the background color on hover */
 }
 
 
